@@ -4,15 +4,14 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "start": "node index.js",
     "test": "mocha -R spec spec.js"
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
     "express": "^4.16.3",
+    "mocha": "^5.1.0",
     "supertest": "^3.0.0"
-  },
-  "devDependencies": {
-    "mocha": "^5.1.0"
   }
 }
