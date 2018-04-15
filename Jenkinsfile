@@ -1,8 +1,14 @@
-stage('Test') {
+pipeline {
     agent {
-        docker { image 'mhart/alpine-node' }
+        docker {
+            image 'mhart/alpine-node'
+        }
     }
-    steps {
-        println 'hi'
+    stages {
+        stage('Build') {
+            steps {
+                sh 'npm test'
+            }
+        }
     }
 }
