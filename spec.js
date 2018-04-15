@@ -28,8 +28,8 @@ describe('Testing Express endpoints...', () => {
     chai.request(server)
       .get('/randomNumber')
       .end((err, res) => {
-        expect(res.text<1).to.equal(true);
-        expect(res.text>0).to.equal(true);
+        expect(Number(res.text)).to.be.below(1);
+        expect(Number(res.text)).to.be.above(0);
         done();
       });
   });
