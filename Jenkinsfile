@@ -1,6 +1,7 @@
 pipeline {
+    agent any
     stages {
-        stage('Build') {
+        stage('Unit Tests') {
             agent {
                 docker {
                     image 'mhart/alpine-node'
