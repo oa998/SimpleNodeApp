@@ -15,7 +15,7 @@ describe('Testing Express endpoints...', () => {
     server.close();
   });
 
-  it('"/randomNumber" endpoint responds with status 200', (done) => {
+  it('1. /randomNumber endpoint responds with status 200', (done) => {
     chai.request(server)
       .get('/randomNumber')
       .end((err, res) => {
@@ -24,7 +24,7 @@ describe('Testing Express endpoints...', () => {
       });
   });
 
-  it('2. gets a value between 0 and 1 from the /randomNumber address', (done) => {
+  it('2. /randomNumber endpoint responds with a value between 0 and 1', (done) => {
     chai.request(server)
       .get('/randomNumber')
       .end((err, res) => {
@@ -34,7 +34,7 @@ describe('Testing Express endpoints...', () => {
       });
   });
 
-  it('3. gets a 404 status response from other addresses', (done) => {
+  it('3. gets a 404 status response from undefined endpoints', (done) => {
     chai.request(server)
       .get('/anUndefinedEndpoint')
       .end((err, res) => {
